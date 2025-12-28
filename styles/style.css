@@ -179,7 +179,7 @@
   animation: sparks-animation 0.3s ease-in 0.3s;
 }
 
-/* стили для футера - блока "сохрани на память" с диалоговым окном */
+/* стили для блока "сохрани на память" с диалоговым окном */
 
 .save_button {
   max-block-size: 84px;
@@ -243,6 +243,7 @@
 .ok_button {
   height: 38px;
   border: var(--border_card);
+  text-transform: uppercase;
 }
 
 .floppy_icon {
@@ -331,48 +332,48 @@ button {
 
 /* Фильтры для картинок */
 
-.lets_go {
+.saturate {
   filter: saturate(150%);
 }
 
-.avadakedavra {
+.hue-rotate {
   filter: hue-rotate(-140deg);
 }
 
-.fire {
+.contrast_hue-rotate {
   filter: contrast(150%) hue-rotate(-40deg)
 }
 
-.troble {
+.sepia {
   filter: sepia(50%);
 }
 
-.tired {
+.mix-filter {
   filter: grayscale(1) contrast(40%) blur(3px);
 }
 
-.pu_pu_puu {
+.opacity_bright {
   filter: opacity(0.7) brightness(120%)
 }
 
-.radical {
+.saturate_x2 {
   filter: saturate(200%);
 }
 
-.next_please {
+.invert {
   filter: invert(90%);
 }
 
 /* медиазапросы для экранов 375px */
 
-@media (width <= 375px) {
+@media (max-width: 375px) {
   .save_button {
     flex-direction: column;
     padding-block: 17px;
   }
 
-  .need-save_card {
-  padding-inline: 40px !important;
+  .need-save_card[open] {
+  padding-inline: 40px;
   }
 }
 
