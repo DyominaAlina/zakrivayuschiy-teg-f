@@ -38,19 +38,19 @@
   gap: 20px;
   background-color: var(--bg-color);  
   border: var(--border_card);
-  padding-block: clamp(122px, 5vw + 50px, 130px);
+  padding-block: clamp(122px, 9vw + 50px, 130px);
 }
 
 .header_title {
   font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(49px, 8vw, 65px);
 }
 
 .header_subtitle {
   font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(14px, 3vw, 23px);
 }
 
 /* стили для основного тела сайта и карточек */
@@ -76,7 +76,7 @@
   font-variation-settings: 'wght' 715;
   font-size: 18px;
   display: flex;
-  padding: 4px 10px;
+  padding: 0px 10px;
 }
 
 .card_picture {
@@ -101,14 +101,19 @@
   font-size: 14px;
   text-transform: uppercase;
   color: var(--border_text-color); 
-  text-shadow: 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 
+    -1px 0 1px var(--bg-color),
+    1px 0 1px var(--bg-color),
+    0 -1px 1px var(--bg-color),
+    0 1px 1px var(--bg-color);
   mix-blend-mode: hard-light; 
   opacity: 0.5;
 }
 
-@supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)) {
+@supports (-webkit-text-stroke: 1px var(--bg-color) or (text-stroke: 1px var(--bg-color))) {
   .whater_lable {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
   }
 }
 
@@ -195,8 +200,8 @@
 }
 
 .floppy_icon_button {
-  width: 28px;
-  height: 28px;
+  width: 21px;
+  height: 21px;
 }
 
 .button__text {
